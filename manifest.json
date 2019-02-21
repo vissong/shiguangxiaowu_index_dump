@@ -1,0 +1,31 @@
+{
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "md5.js","timehub.js" ],
+      "matches": [ "http://peekaboomoments.com/*", "http://www.peekaboomoments.com/*", "https://peekaboomoments.com/*", "https://www.peekaboomoments.com/*", "http://shiguangxiaowu.cn/*", "http://www.shiguangxiaowu.cn/*", "https://shiguangxiaowu.cn/*", "https://www.shiguangxiaowu.cn/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "时光小屋索引生成",
+   "icons": {
+      "128": "icons/128.png",
+      "16": "icons/16.png",
+      "48": "icons/48.png"
+   },
+   "manifest_version": 2,
+   "name": "时光小屋索引生成",
+   "page_action": {
+      "default_icon": {
+         "128": "icons/128-gray.png",
+         "16": "icons/16-gray.png",
+         "48": "icons/48-gray.png"
+      },
+      "default_popup": "popups/404.html",
+      "default_title": "tools"
+   },
+   "permissions": [ "http://*/*", "https://*/*", "file://*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1",
+   "web_accessible_resources": [ "background.js" ]
+}
